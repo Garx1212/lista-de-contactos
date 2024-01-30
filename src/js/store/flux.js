@@ -7,7 +7,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions: {
 			getAgenda: async () => {
 				const store = getStore();
-				const response = await fetch(`${store.urlAPI}agenda/agenda_hector`);
+				const response = await fetch(`${store.urlAPI}agenda/agenda`);
 				const data = await response.json(); 
 				setStore({ agenda: data })
 			},
